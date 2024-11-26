@@ -1,1 +1,20 @@
-<p>menunav works!</p>
+<!-- Contenedor del menú -->
+<div class="menu" [ngClass]="{'open': menuOpen}">
+    <ul>
+      <li><a routerLink="/dashboard">🏠 Dashboard</a></li>
+      <li><a routerLink="/media">🎬 Media</a></li>
+      <li><a routerLink="/pages">📄 Pages</a></li>
+      <li><a routerLink="/products">📦 Products</a></li>
+      <li><a routerLink="/settings">⚙️ Settings</a></li>
+      <li><a routerLink="/statistics">📊 Statistics</a></li>
+    </ul>
+  </div>
+  
+  <!-- Botón para abrir/cerrar el menú -->
+  <button class="menu-button" (click)="toggleMenu()"></button>
+  
+  <!-- El contenido principal (se mueve al abrir el menú) -->
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  

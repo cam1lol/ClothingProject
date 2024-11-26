@@ -1,0 +1,73 @@
+/* Estilos para el menú lateral */
+.menu {
+    position: fixed;
+    left: -250px; /* Menú cerrado, desplazado a la izquierda */
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000; /* Menú por encima del contenido */
+  }
+  
+  .menu.open {
+    left: 0; /* Menú abierto, vuelve a la posición original */
+  }
+  
+  /* Estilos de la lista del menú */
+  .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu ul li {
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu ul li a:hover {
+    background-color: #444;
+  }
+  
+  /* Botón para abrir/cerrar el menú */
+  .menu-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    z-index: 1100; /* Asegura que el botón esté por encima del menú */
+  }
+  
+  .menu-button:focus {
+    outline: none;
+  }
+  
+  /* Estilo para el contenido cuando el menú está abierto */
+  .content {
+    margin-left: 0;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  /* Cuando el menú está abierto, se desplaza el contenido */
+  .menu.open + .content {
+    margin-left: 250px; /* Desplazar el contenido cuando el menú está abierto */
+  }
+  
+  /* Cuando el menú está cerrado, no hay desplazamiento */
+  .menu-button {
+    z-index: 9999; /* Asegura que el botón esté encima de todo, incluso si el menú está abierto */
+  }
+  

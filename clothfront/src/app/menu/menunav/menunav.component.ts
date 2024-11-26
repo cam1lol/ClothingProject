@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menunav',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./menunav.component.css']
 })
 export class MenunavComponent {
+  menuOpen = false;
+
+  // Función para alternar el estado del menú
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
 }
