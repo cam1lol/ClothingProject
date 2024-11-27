@@ -1,20 +1,116 @@
-<!-- Contenedor del menú -->
-<div class="menu" [ngClass]="{'open': menuOpen}">
-    <ul>
-      <li><a routerLink="/dashboard">🏠 Dashboard</a></li>
-      <li><a routerLink="/media">🎬 Media</a></li>
-      <li><a routerLink="/pages">📄 Pages</a></li>
-      <li><a routerLink="/products">📦 Products</a></li>
-      <li><a routerLink="/settings">⚙️ Settings</a></li>
-      <li><a routerLink="/statistics">📊 Statistics</a></li>
-    </ul>
-  </div>
+<div class="container">
+    <div class="sidebar" [class.active]="isSidebarActive">
+      <div class="menu-btn" (click)="toggleSidebar()">
+        <i class="bi bi-chevron-left"></i>
+      </div>
   
-  <!-- Botón para abrir/cerrar el menú -->
-  <button class="menu-button" (click)="toggleMenu()"></button>
+      <!-- Encabezado del menú -->
+      <div class="head">
+        <div class="user-img">
+          <img src="assets/C.png" alt="User Image" />
+        </div>
+        <div class="user-detail">
+          <p class="title">web</p>
+          <p class="name">alfo estra</p>
+        </div>
+      </div>
   
-  <!-- El contenido principal (se mueve al abrir el menú) -->
-  <div class="content">
-    <router-outlet></router-outlet>
+      <!-- Menú de navegación -->
+      <div class="nav">
+        <!-- Bloque Main -->
+        <div class="menu">
+          <p class="title">Main</p>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="bi bi-house-door"></i>
+                <span class="text">Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a (click)="toggleSubMenu($event)">
+                <i class="bi bi-person"></i>
+                <span class="text">Productos</span>
+                <i class="arrow ph-bold ph-caret-down"></i>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">
+                    <span class="text">Ropa</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="text">New</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="active">
+              <a href="#">
+                <i class="bi bi-ban"></i>
+                <span class="text">Pages</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-bar-chart"></i>
+                <span class="text">Statistics</span>
+              </a>
+            </li>
+            <li>
+              <a (click)="toggleSubMenu($event)">
+                <i class="bi bi-person"></i>
+                <span class="text">Products</span>
+                <i class="arrow ph-bold ph-caret-down"></i>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a href="#">
+                    <span class="text">Media</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="text">Data</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Bloque Settings -->
+        <div class="menu">
+          <p class="title">Settings</p>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="bi bi-gear"></i>
+                <span class="text">Settings</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="menu">
+          <p class="title">Cuenta</p>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="bi bi-info-circle"></i>
+                <span class="text">Ayuda</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span class="text">Cerrar Sesion</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
   
