@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  app-header {
+    height: 60px;
+    background-color: #f8f9fa;
+  }
+  
+  app-sidebar {
+    width: 256px;
+    height: 100%;
+    background-color: #343a40;
+    position: fixed;
+  }
+  
+  .content {
+    margin-left: 256px;
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  app-footer {
+    height: 40px;
+    background-color: #f8f9fa;
+  }
+  

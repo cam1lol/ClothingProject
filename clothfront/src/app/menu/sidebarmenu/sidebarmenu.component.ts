@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-menunav',
-  templateUrl: './menunav.component.html',
-  styleUrls: ['./menunav.component.css'],
+  selector: 'app-sidebarmenu',
+  templateUrl: './sidebarmenu.component.html',
+  styleUrls: ['./sidebarmenu.component.css'],
 })
 export class MenunavComponent {
   // Propiedad para controlar la visibilidad de la barra lateral
