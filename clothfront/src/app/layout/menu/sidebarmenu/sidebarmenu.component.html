@@ -22,13 +22,13 @@
           <p class="title">Main</p>
           <ul>
             <li>
-              <a href="#">
+              <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active"  >
                 <i class="bi bi-house-door"></i>
                 <span class="text">Inicio</span>
               </a>
             </li>
             <li>
-              <a (click)="toggleSubMenu($event)">
+              <a [routerLink]="['/products']" routerLinkActive="router-link-active"  (click)="toggleSubMenu($event)">
                 <i class="bi bi-person"></i>
                 <span class="text">Productos</span>
                 <i class="arrow ph-bold ph-caret-down"></i>

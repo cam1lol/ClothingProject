@@ -7,11 +7,11 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: 'dashboard', loadChildren: () => import('./menu/menu-routing.module').then(m => m.MenuRoutingModule) },
+      { path: '', loadChildren: () => import('./layout/menu/menu-routing.module').then(m => m.MenuRoutingModule) },
       
     ],
   },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, 
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }, // ruta por defecto hasta cambiar a la principal
 ];
 
 @NgModule({

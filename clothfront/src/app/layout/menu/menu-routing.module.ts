@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// Importar los componentes que se usarán en las rutas
+// Imports donde están los componentes que se usarán en las rutas
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MediaComponent } from './media/media.component';
 import { PagesComponent } from './pages/pages.component';

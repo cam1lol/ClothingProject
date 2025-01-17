@@ -206,6 +206,10 @@
   }
 }
 
+@media (min-width: 1280px) {
+  
+}
+
 /* Media query para pantallas medianas a grandes (tablets y escritorios) */
 @media (min-width: 769px) {
   .sidebar {
