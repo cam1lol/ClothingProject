@@ -8,6 +8,7 @@ import { PagesComponent } from './pages/pages.component';
 import { ProductsComponent } from './products/products.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StatisticsComponent } from './statistics/statistics.component';
+import { HomeComponent } from 'src/app/home/home/home.component';
 
 // Declaración de las rutas
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'statistics', component: StatisticsComponent },
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({

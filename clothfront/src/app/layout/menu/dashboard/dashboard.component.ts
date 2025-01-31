@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 
+  name: any; string = 'Camilo Ayala';
+  jobTitle: string = 'Software Engineer';
+  introduction: string = 'This is an introduction text.';
+
 }

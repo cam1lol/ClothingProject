@@ -1,1 +1,19 @@
-
+<nav class="mainnav">
+    <div class="logocontainer_nav">
+        <img src="assets/C.png" alt="User Image" class="logonav"/>
+    </div>
+    <div class="listitemsmenu">
+        <ul class="itemsdata">
+            <a [routerLink]="['/home']" routerLinkActive="router-link-active">
+                <li class="item_nav">about me</li>
+            </a>
+           
+            <li class="item_nav">my projects</li>
+            <li class="item_nav">my repository</li>
+            <li class="item_nav">contact me</li>
+        </ul>
+    </div>
+    <button class="contactmebtn">go to repo 
+        <i class="bi bi-arrow-up-right"></i>
+    </button>
+</nav>
