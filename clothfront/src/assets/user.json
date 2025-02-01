@@ -1,0 +1,34 @@
+{
+    "user": {
+      "name": "Camilo Ayala",
+      "description": "Soy un desarrollador de software con experiencia sólida en la creación de soluciones tecnológicas innovadoras y escalables. A lo largo de mi carrera, he trabajado con un amplio conjunto de tecnologías, incluyendo Angular, Spring Boot, Java, JavaScript, TypeScript, C# y SQL, destacándome en el desarrollo tanto de frontend como de backend. Mi enfoque está en diseñar interfaces de usuario intuitivas y sistemas robustos que ofrezcan un rendimiento excepcional.",
+      
+      "technologies": ["Angular", "Spring Boot", "Java", "C#", "TypeScript", "JavaScript", "PostgreSQL", "AWS", "Azure"],
+      "education": {
+        "degree": "Estudiante Ing Sistemas",
+        "university": "Corporación Unificada Nacional de Educación Superior (CUN)",
+        "yearRange": "2023 - 2025",
+        "gpa": 4.0
+      },
+      "projects": [
+        {
+          "name": "API chat bot",
+          "description": " Una API que interactúa con los usuarios utilizando procesamiento de lenguaje natural (NLP) y aprendizaje automático.",
+          "imageUrl": ""
+        },
+        {
+          "name": "Panel de Control de Analytics",
+          "description": "una aplicación de panel de control que muestra gráficos interactivos con datos de analítica.",
+          "imageUrl": ""
+        },
+        {
+          "name": "Calculadora de Finanzas Personales",
+          "description": "una calculadora para gestionar las finanzas personales de los usuarios.",
+          "imageUrl": ""
+        }
+      ]
+    },
+    "title": "Camilo Ayala",
+    "technologies": ["Angular", "Spring Boot", "Java", "C#", "TypeScript", "JavaScript", "PostgreSQL", "AWS", "Azure"]
+  }
+  

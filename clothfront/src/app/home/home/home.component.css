@@ -1,140 +1,248 @@
-/* 🔹 Ajustes Generales */
-html, body {
+/* 1. General Styles */
+* {
     margin: 0;
     padding: 0;
-    width: 100%;
-    overflow-x: hidden; /* Evita desplazamiento horizontal */
+    box-sizing: border-box;
 }
 
-.ancho {
-    width: 100%;
-    color: #060208;
-    overflow: hidden; /* Bloquea el desbordamiento horizontal */
+p {
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.5; 
+    margin-bottom: 20px;
+    text-align: justify; 
+    color: #333; 
 }
 
-.ancho p {
-    text-align: justify;
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
 }
 
-.name {
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.hero-image {
+    flex: 1;
+    background-color: #e5d7c9;
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.hero-image img {
+    max-width: 100%;
     height: auto;
-    text-align: center;
-    font-size: 28px; /* Un poco más pequeño */
 }
 
-.full {
-    font-size: 18px; /* Reduzco un poco */
-    text-align: center;
+.hero-content {
+    flex: 1;
+    padding-left: 40px;
 }
 
-/* 🔹 Contenedor de las Cards */
-.projects-container {
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    margin-top: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* 3. Technologies Section */
+.technologies h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tech-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px; /* Espacio entre las tarjetas */
-    padding: 15px;
-    max-width: 100%;
-    width: 100%;
+    gap: 10px;
 }
 
-/* 🔹 Card Más Pequeña */
-.card {
+.tech-badge {
+    background-color: #efebdd;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.tech-badge:hover {
+    background-color: #efebdd;
+    color: #9e9b9b; 
+    transform: translateY(-3px);
+}
+
+/* 4. Education Section */
+.education {
+    margin-bottom: 40px;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.gpa {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* 5. Projects Section */
+.project-list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsivo */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    width: 250px; /* Reducido de 300px a 250px */
-    max-width: 90%;
-    border-radius: 15px;
-    background: rgb(#fcfdf8);
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8);
-    text-align: center;
-    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-info {
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.project-info button {
+    padding: 10px 20px;
+    background-color: #efebdd;
+    /* color: #9e9b9b; */
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transform-style: preserve-3d;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-info button:hover {
+    background-color: #fff7f7;
+    transform: translateY(-3px); /* Efecto de desplazamiento hacia arriba */
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
     overflow: hidden;
 }
 
-/* 🔹 Efecto Hover */
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* 🔹 Imagen */
-.card-image {
-    width: 100%;
-    height: 180px; /* Reducida de 210px a 180px */
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
-
-.card-image img {
+.project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* 🔹 Contenido */
-.card-text {
-    padding: 15px;
+.project-card:hover .project-image img {
+    transform: scale(1.1);
 }
 
-.card-text .date {
-    color: rgb(255, 7, 110);
-    font-size: 12px;
+/* 6. Social Media Links */
+.social-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 
-.card-text p {
-    color: rgb(20, 8, 8);
-    font-size: 14px;
-    font-weight: 300;
+button {
+    background-color: #efebdd;
+    /* color: #fff; */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.card-text h2 {
-    margin-top: 0px;
-    font-size: 18px;
+button:hover {
+    background-color: #f8f1f1;
+    transform: translateY(-3px);
 }
 
-/* 🔹 Estadísticas */
-.card-stats {
-    display: flex;
-    justify-content: space-around;
-    padding: 8px;
-    background: rgb(89, 164, 216);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-}
+/* 7. Media Queries for Mobile */
+@media (max-width: 768px) {
+    /* Ajustes para la hero section en móviles */
+    .hero {
+        flex-direction: column;
+    }
 
-.card-stats .stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-}
+    .hero-content {
+        padding-left: 0;
+        padding-top: 20px;
+    }
 
-.card-stats .type {
-    font-size: 10px;
-    font-weight: 300;
-    text-transform: uppercase;
-}
+    /* Ajustes para las tarjetas de proyecto */
+    .project-card {
+        flex-direction: column;
+    }
 
-.card-stats .value {
-    font-size: 20px;
-    font-weight: 500;
-}
+    .project-image {
+        width: 100%;
+        height: 150px;
+        margin-top: 20px;
+    }
 
-.card-stats .border {
-    border-left: 1px solid rgb(172, 26, 87);
-    border-right: 1px solid rgb(172, 26, 87);
-}
-
-.card-stats .value sup {
-    font-size: 10px;
-}
-
-/* 🔹 Media Query para Pantallas Muy Pequeñas */
-@media screen and (max-width: 400px) {
-    .card {
-        width: 80%;
+    /* Ajuste para las redes sociales */
+    .social-links {
+        grid-template-columns: 1fr;
     }
 }

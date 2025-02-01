@@ -1,41 +1,65 @@
-<div class="ancho" [style.width]="'100%'">
-    <h1 class="name">Camilo Ayala</h1>
-    <h2 class="full">Full Stack Developer</h2>
-    <h2>About Me</h2>
-    <p>Soy un desarrollador full stack con experiencia en la creación de aplicaciones web escalables y soluciones de manejo de datos. 
-        Tengo habilidades sólidas en tecnologías frontend como Angular, JavaScript y TypeScript, así como en backend con Java, C#, Spring Boot y Ruby. 
-        También cuento con experiencia en bases de datos SQL, incluyendo PostgreSQL, y en prácticas de CI/CD con GitHub.
-    </p>
-
-    <p>Tengo un enfoque orientado al aprendizaje continuo, lo que me permite mantenerme actualizado con las últimas tendencias y tecnologías. 
-        Además, he trabajado en entornos ágiles (Scrum) y poseo habilidades en la gestión de entornos en la nube como Azure y AWS, implementando soluciones tipo PaaS y gestionando RDS.
-    </p>
-
-    <h2>Projects</h2>
-</div>
-
-
-<div class="card">
-    <div class="card-image">
-        <img src="/assets/spline.jpeg" alt="Project Image">
-    </div>
-    <div class="card-text">
-        <span class="date">4 days ago</span>
-        <h2>Post One</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur veniam cumque accusamus consequuntur.</p>
-    </div>
-    <div class="card-stats">
-        <div class="stat">
-            <div class="value">4<sup>m</sup></div>
-            <div class="type">read</div>
+<div class="container">
+    <main>
+      <section class="hero">
+        <div class="hero-image">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-tNMprOm13cC9xoGBrI2TyBa6n3VGAK.png" alt="Technology Logo">
         </div>
-        <div class="stat border">
-            <div class="value">5123</div>
-            <div class="type">views</div>
+        <div class="hero-content">
+          <h1>{{ title }}</h1>
+          <br>
+          <p>{{ description }}</p>
+          <br>
+          <p>Mi compromiso con el aprendizaje continuo me impulsa a mantenerme actualizado con las últimas tendencias y tecnologías del sector, lo que me permite aportar valor a proyectos innovadores. 
+             Estoy en búsqueda de nuevas oportunidades donde pueda seguir creciendo y aplicar mis conocimientos para desarrollar soluciones que resuelvan los desafíos más complejos.</p>
         </div>
-        <div class="stat">
-            <div class="value">1</div>
-            <div class="type">commit</div>
+      </section>
+  
+      <section class="technologies">
+        <h2>Technologies</h2>
+        <div class="tech-list">
+          <span *ngFor="let tech of technologies" class="tech-badge">{{ tech }}</span>
         </div>
-    </div>
-</div>
+      </section>
+
+      <br>
+  
+      <section class="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <div>
+            <h3>{{ user.education?.degree }}, {{ user.education?.university }}</h3>
+            <p>{{ user.education?.yearRange }}</p>
+          </div>
+          <p class="gpa">GPA: {{ user.education?.gpa }}</p>
+        </div>
+      </section>
+  
+      <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+          <div *ngFor="let project of user.projects" class="project-card">
+            <div class="project-info">
+              <h3>{{ project.name }}</h3>
+              <p>{{ project.description }}</p>
+              <button type="button" (click)="viewProject(project)">View project</button>
+            </div>
+            <div class="project-image">
+              <img [src]="project.imageUrl" [alt]="project.name">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <br>
+
+      <section class="social-media">
+        <h2>Social Media</h2>
+        <div class="social-links">
+          <button type="button" (click)="goToLinkedIn()"><i class="bi bi-linkedin"></i>   LinkedIn</button>
+          <button type="button" (click)="goToGitHub()"><i class="bi bi-github"></i>   GitHub</button>
+          <button type="button" (click)="goToTwitter()"><i class="bi bi-twitter"></i>   Twitter</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  
