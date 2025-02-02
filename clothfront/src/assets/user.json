@@ -1,34 +1,74 @@
 {
-    "user": {
-      "name": "Camilo Ayala",
-      "description": "Soy un desarrollador de software con experiencia sólida en la creación de soluciones tecnológicas innovadoras y escalables. A lo largo de mi carrera, he trabajado con un amplio conjunto de tecnologías, incluyendo Angular, Spring Boot, Java, JavaScript, TypeScript, C# y SQL, destacándome en el desarrollo tanto de frontend como de backend. Mi enfoque está en diseñar interfaces de usuario intuitivas y sistemas robustos que ofrezcan un rendimiento excepcional.",
-      
-      "technologies": ["Angular", "Spring Boot", "Java", "C#", "TypeScript", "JavaScript", "PostgreSQL", "AWS", "Azure"],
-      "education": {
+  "user": {
+    "name": "Camilo Ayala",
+    "description": "Soy un desarrollador de software con experiencia sólida en la creación de soluciones tecnológicas innovadoras y escalables. A lo largo de mi carrera, he trabajado con un amplio conjunto de tecnologías, incluyendo Angular, Spring Boot, Java, JavaScript, TypeScript, C# y SQL, destacándome en el desarrollo tanto de frontend como de backend. Mi enfoque está en diseñar interfaces de usuario intuitivas y sistemas robustos que ofrezcan un rendimiento excepcional.",
+    
+    "technologies": [
+      { "name": "HTML", "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content" },
+      { "name": "CSS", "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content" },
+      { "name": "JavaScript", "url": "https://developer.mozilla.org/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript" },
+      { "name": "Java", "url": "https://www.java.com/es/download/help/whatis_java.html" },
+      { "name": "Spring Boot", "url": "https://www.ibm.com/mx-es/topics/java-spring-boot" },
+      { "name": "Angular", "url": "https://v17.angular.io/guide/what-is-angular" },
+      { "name": "Typescript", "url": "https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html" },
+      { "name": "C#", "url": "https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/overview" },
+      { "name": "PostgresSQL", "url": "https://www.ibm.com/mx-es/topics/postgresql" },
+      { "name": "MySQL", "url": "https://www.oracle.com/co/mysql/what-is-mysql/" },
+      { "name": "AWS", "url": "https://aws.amazon.com/es/what-is-aws/" },
+      { "name": "Azure", "url": "https://azure.microsoft.com/es-es/resources/cloud-computing-dictionary/what-is-azure" },
+      { "name": "GIT", "url": "https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Fundamentos-de-Git" }
+    ],
+    
+    "education": [
+      {
+        "degree": "Tecnico en Sistemas",
+        "university": "SENA",
+        "yearRange": "2018 - 2019",
+        "gpa": 4.5
+      },
+      {
+      "degree": "Teconologo en Analisis y Desarrollo de Sistemas de Información (ADSI)",
+      "university": "SENA",
+      "yearRange": "2021 - 2023",
+      "gpa": 4.5
+      },
+      {
         "degree": "Estudiante Ing Sistemas",
         "university": "Corporación Unificada Nacional de Educación Superior (CUN)",
-        "yearRange": "2023 - 2025",
+        "yearRange": "2024 - 2025",
         "gpa": 4.0
+      }
+    ],
+
+    "experience": {
+        "company": "Pago Simple SA",
+        "yearRange": "03/04/23 a 11/07/2024",
+        "position": "Desarrollador Full Stack",
+        "description": "Desarrollé APIs y sistemas de gestión enfocados en el manejo de información para la liquidación y pago de aportes a la seguridad social, parafiscales, cesantías y pensiones voluntarias. Implementé soluciones escalables y eficientes para mejorar el procesamiento de datos y optimizar los procesos de pago."
       },
-      "projects": [
-        {
-          "name": "API chat bot",
-          "description": " Una API que interactúa con los usuarios utilizando procesamiento de lenguaje natural (NLP) y aprendizaje automático.",
-          "imageUrl": ""
-        },
-        {
-          "name": "Panel de Control de Analytics",
-          "description": "una aplicación de panel de control que muestra gráficos interactivos con datos de analítica.",
-          "imageUrl": ""
-        },
-        {
-          "name": "Calculadora de Finanzas Personales",
-          "description": "una calculadora para gestionar las finanzas personales de los usuarios.",
-          "imageUrl": ""
-        }
-      ]
-    },
-    "title": "Camilo Ayala",
-    "technologies": ["Angular", "Spring Boot", "Java", "C#", "TypeScript", "JavaScript", "PostgreSQL", "AWS", "Azure"]
-  }
+
+    "projects": [
+      {
+        "name": "API chat bot",
+        "description": "Una API que interactúa con los usuarios utilizando procesamiento de lenguaje natural (NLP) y aprendizaje automático.",
+        "imageUrl": ""
+      },
+      {
+        "name": "Panel de Control de Analytics",
+        "description": "Una aplicación de panel de control que muestra gráficos interactivos con datos de analítica.",
+        "imageUrl": ""
+      },
+      {
+        "name": "Calculadora de Finanzas Personales",
+        "description": "Una calculadora para gestionar las finanzas personales de los usuarios.",
+        "imageUrl": ""
+      }
+    ]
+  },
   
+  "title": "Camilo Ayala",
+  "technologies": [
+    "Angular", "Spring Boot", "Java", "C#", "TypeScript", 
+    "JavaScript", "PostgreSQL", "AWS", "Azure"
+  ]
+}

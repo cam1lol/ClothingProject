@@ -11,9 +11,21 @@ export class HomeComponent implements OnInit{
   title: string = '';
   user: any = {};
   description: string = '';
-  education: any = {};
-  technologies: string [] = [];
+  education: any = [] = [];
+  technologies: any [] = [];
+  experience: any = {};
   projects: any [] = [];
+
+  isModalOpen: boolean = false;
+
+
+  openModal(): void {
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
 
   constructor(private http: HttpClient){}
 
@@ -22,12 +34,13 @@ export class HomeComponent implements OnInit{
       this.title = data.title;
       this.user = data.user;
       this.description = data.user.description;
-      this.education = data.education;
-      this.technologies = data.technologies;
+      this.education = data.user.education;
+      this.technologies = data.user.technologies;
+      this.experience = data.user.experience;
       this.projects = data.user.projects;
       
     })
-    console.log("DATOS DE USUARIO",this.education);
+    console.log("DATOS DE user.education",this.education);
     console.log("DATOS DE PROJECTS", this.projects);
   }
 
