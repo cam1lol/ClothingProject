@@ -18,16 +18,20 @@ export class HomeComponent implements OnInit{
 
   isModalOpen: boolean = false;
 
-
   openModal(): void {
     this.isModalOpen = true;
+    console.log('Modal abierto:', this.isModalOpen);
   }
 
   closeModal(): void {
     this.isModalOpen = false;
+    console.log('Modal cerrado:', this.isModalOpen)
   }
 
-  constructor(private http: HttpClient){}
+
+  constructor(private http: HttpClient){
+
+  }
 
   ngOnInit() {
     this.http.get<any>('/assets/user.json').subscribe(data => {

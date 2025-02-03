@@ -69,13 +69,54 @@
             <strong>Descripcion de funciones:</strong>
             {{ experience.description }}
           </p>
-          <button (click)="openModal()" class="open-modal-btn">Mas info</button>
+          <button mat-raised-button (click)="openModal()" class="open-modal-btn">
+            Mas info
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Modal Para mas informacion de la exp -->
 
+    <div class="modal-overlay" [ngClass]="{ show: isModalOpen }" (click)="closeModal()">
+        <div class="modal" (click)="$event.stopPropagation()">
+          <div class="modal-header">
+            <h2>Detalles de la Experiencia</h2>
+            <button class="close-btn" (click)="closeModal()">
+              <i class="bi bi-x"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3><strong>Puesto:</strong> Desarrollador Full Stack</h3>
+      
+            <h3>📌 Tecnologías y Herramientas Utilizadas</h3>
+            <ul>
+              <li><strong>Backend:</strong> Java (Spring Boot), C# y C.</li>
+              <li><strong>Frontend:</strong> Angular (Componentes reutilizables, optimización UI/UX).</li>
+              <li><strong>Base de Datos:</strong> Oracle, MongoDB, MySQL, PostgreSQL, MariaDB.</li>
+              <li><strong>Despliegue:</strong> Microsoft Azure.</li>
+              <li><strong>Gestión:</strong> Jira (Scrum + Canvas), Zephyr Squad.</li>
+            </ul>
+      
+            <h3>💼 Funciones Claves</h3>
+            <ul>
+              <li>Desarrollo de APIs RESTful en Spring Boot y Java.</li>
+              <li>Optimización de la UI/UX con Angular.</li>
+              <li>Gestión de bases de datos y creación de procedimientos almacenados.</li>
+              <li>Trabajo en equipo con metodologías ágiles (Scrum + Canvas).</li>
+              <li>Documentación de sistemas para facilitar la transición y mantenimiento.</li>
+            </ul>
+      
+            <h3>🏆 Logros Destacados</h3>
+            <ul>
+              <li>Automatización del proceso de compra y pago de cesantías en Spring Boot.</li>
+              <li>Creación de un formulario digital para tratamiento de datos, reduciendo procesos manuales.</li>
+              <li>Migración de aplicativos internos, mejorando rendimiento y escalabilidad.</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+      
 
     <section class="projects">
       <h2>Projects</h2>
