@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout/layout.component';
 import { HomeComponent } from './home/home/home.component';
+import { ContactmeComponent } from './home/contactme/contactme.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       
+      { path: 'contact', component: ContactmeComponent }, // Agregamos la ruta para el formulario
       { path: 'menu', loadChildren: () => import('./layout/menu/menu-routing.module').then(m => m.MenuRoutingModule) },
       
     ],

@@ -1,0 +1,172 @@
+/* Reset general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(24, 24, 24, 0.8), rgba(34, 34, 34, 0.9)), 
+                url('https://source.unsplash.com/1600x900/?technology,dark'); 
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(10px); /* Difuminado del fondo */
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 0 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal */
+.content {
+    max-width: 900px;
+    width: 100%;
+    background: rgba(196, 196, 196, 0.8); /* Fondo oscuro semitransparente */
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(216, 209, 209, 0.2);
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.logo span {
+    color: #b70e21;
+}
+
+/* Contact Wrapper */
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Formulario */
+.contact-form {
+    background: #f4f4f4;
+    flex: 1;
+    padding: 2em;
+    gap: 1em;
+}
+
+.contact-form h3 {
+    grid-column: span 2;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+/* Ajustar los campos del formulario */
+.contact-form p {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+/* Labels */
+.contact-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs y textareas */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid #be8a8a;
+    font-size: 1em;
+    transition: border-bottom 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Mejorar la visibilidad de los inputs al hacer foco */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-bottom: 2px solid #b70e21;
+    box-shadow: 0px 3px 10px rgba(183, 14, 33, 0.3);
+}
+
+/* Botón de enviar */
+.contact-form button {
+    width: 100%;
+    background: #b70e21;
+    border: none;
+    padding: 12px;
+    font-size: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Efecto hover en botón */
+.contact-form button:hover {
+    background: #ff4757;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+/* Información de contacto */
+.contact-info {
+    background: #1d1c1c;
+    flex: 1;
+    color: #d0d0d0;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-info h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 5px;
+    color: #b70e21;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form h3 {
+        grid-column: span 1;
+    }
+
+    .contact-form .block {
+        grid-column: span 1;
+    }
+}
