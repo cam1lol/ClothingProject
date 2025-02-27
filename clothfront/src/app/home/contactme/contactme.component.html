@@ -4,20 +4,20 @@
     <div class="contact-wrapper">
         <div class="contact-form">
             <h3>Contact Me</h3>
-            <form action="">
+            <form id="contact-form">
                 <p>
                     <label for="fullname">Nombre Completo</label>
-                    <input type="text" name="fullname" id="fullname" required> 
+                    <input type="text" name="fullname" id="fullname" required>
                 </p>
 
                 <p>
-                    <label for="email">Correo Electronico</label>
+                    <label for="email">Correo Electrónico</label>
                     <input type="email" name="email" id="email" required>
                 </p>
 
                 <p>
-                    <label for="phone">Telefono</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone" pattern="^\+?[1-9]\d{1,14}$" required>
                 </p>
 
                 <p>
@@ -27,7 +27,7 @@
 
                 <p class="block">
                     <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" rows="3"></textarea>
+                    <textarea name="message" id="message" rows="3" required></textarea>
                 </p>
 
                 <p class="block">
@@ -37,16 +37,14 @@
         </div>
 
         <div class="contact-info">
-            <h4>Mas informacion</h4>
+            <h4>Más Información</h4>
             <ul>
-                <li><i class="bi bi-geo-alt-fill"></i>Bogota DC</li>
-                <li><i class="bi bi-phone"></i>3046554890</li>
-                <li><i class="bi bi-person-lines-fill"></i>kmilo0230@gmail.com</li>
-
-                <p>En este formulario puedes contactarme para formalizar un proyecto o una oferta laboral mas rapido.
-                </p>
-                <p><i class="bi bi-linkedin"></i></p>
+                <li><i class="bi bi-geo-alt-fill"></i> Bogotá DC</li>
+                <li><i class="bi bi-phone"></i> 3046554890</li>
+                <li><i class="bi bi-person-lines-fill"></i> kmilo0230@gmail.com</li>
             </ul>
+            <p>En este formulario puedes contactarme para formalizar un proyecto o una oferta laboral más rápido.</p>
+            <p><i class="bi bi-linkedin"></i></p>
         </div>
     </div>
 </div>

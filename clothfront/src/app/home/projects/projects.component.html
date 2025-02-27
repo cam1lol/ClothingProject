@@ -1,0 +1,53 @@
+<div class="projects-container">
+  <div class="layout-container">
+    <div class="content-wrapper">
+
+      <!-- Banner de Imagen -->
+      <div class="image-banner"></div>
+
+      <!-- Encabezado de Proyectos -->
+      <div class="projects-header">
+        <p>Frontend Projects</p>
+      </div>
+
+      <!-- Grid de Proyectos -->
+      <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of paginatedProjects()">
+          <div
+            class="project-image"
+            [style.backgroundImage]="'url(' + project.image + ')'"
+          ></div>
+          <div class="project-info">
+            <h2>{{ project.name }}</h2>
+            <p>{{ project.description }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Paginación -->
+       
+      <div class="pagination">
+        <!-- Flecha Izquierda -->
+        <a href="#" class="pagination-arrow" (click)="changePage(currentPage - 1); $event.preventDefault()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"></path>
+          </svg>
+        </a>
+
+        <!-- Números de Página -->
+        <a *ngFor="let page of totalPages()" href="#" class="pagination-number" [class.active]="page === currentPage" (click)="changePage(page); $event.preventDefault()">
+          {{ page }}
+        </a>
+
+        <!-- Flecha Derecha -->
+        <a href="#" class="pagination-arrow" (click)="changePage(currentPage + 1); $event.preventDefault()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill="currentColor" viewBox="0 0 256 256">
+            <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"></path>
+          </svg>
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+</div>

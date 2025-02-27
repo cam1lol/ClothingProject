@@ -31,6 +31,9 @@ p {
     font-family: 'ubuntu';
 }
 
+h {
+    font-family: 'ubuntu';
+}
 /* 2. Hero Section */
 .hero {
     display: flex;

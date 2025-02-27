@@ -22,6 +22,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { HomeComponent } from './home/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContactmeComponent } from './home/contactme/contactme.component';
+import { ProjectsComponent } from './home/projects/projects.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ContactmeComponent } from './home/contactme/contactme.component';
     FooterComponent,
     HeaderComponent,
     HomeComponent,
-    ContactmeComponent
+    ContactmeComponent,
+    ProjectsComponent
   ],
   imports: [
     BrowserModule,

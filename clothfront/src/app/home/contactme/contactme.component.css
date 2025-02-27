@@ -28,6 +28,7 @@ body {
     padding: 2em;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(216, 209, 209, 0.2);
+    align-items: center;
 }
 
 /* Logo */

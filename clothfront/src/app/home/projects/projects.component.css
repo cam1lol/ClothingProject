@@ -1,0 +1,113 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  min-height: 100vh;
+  font-family: "Manrope", "Noto Sans", sans-serif;
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1300px;
+  padding: 30px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.image-banner {
+  width: 100%;
+  height: 250px; 
+  background-image: url("https://cdn.usegalileo.ai/sdxl10/0fc51519-8916-4918-b8ea-f90a54e30df8.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.projects-header p {
+  font-size: 34px;
+  font-weight: bold;
+  color: #111418;
+  margin: 30px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px; 
+  width: 100%;
+  padding: 30px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  border: 1px solid #dce0e5;
+  border-radius: 12px;
+  background-color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+
+.project-info h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111418;
+}
+
+.project-info p {
+  font-size: 14px;
+  color: #637588;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px;
+}
+
+.pagination-number,
+.pagination-arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 14px;
+  color: #111418;
+}
+
+.pagination-number {
+  background-color: transparent;
+  font-weight: normal;
+}
+
+.pagination-number.active {
+  background-color: #f0f2f4;
+  font-weight: bold;
+}
