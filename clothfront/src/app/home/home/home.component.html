@@ -10,7 +10,7 @@
       <div class="hero-content">
         <h1>{{ title }}</h1>
         <br />
-        <h3>Quien Soy: </h3>
+        <h3>¿Quien Soy? </h3>
         <p class="text-data">{{ description }}</p>
         <br />
         <p class="text-data">
@@ -78,7 +78,6 @@
     </section>
 
     <!-- Modal Para mas informacion de la exp -->
-
     <div class="modal-overlay" [ngClass]="{ show: isModalOpen }" (click)="closeModal()">
         <div class="modal" (click)="$event.stopPropagation()">
           <div class="modal-header">
@@ -118,6 +117,72 @@
         </div>
     </div>
       
+    <!-- Barra de porcentaje de aprendizaje -->
+    <div class="HeaderInfoGroup">
+      <h2>Habilidades y Conociemientos</h2>
+      <div class="sepAboutMe"></div>
+    </div>
+    
+
+    <div class="contentSect3">
+      <div class="rightContent">
+        <h3 class="subTitle_AboutMe_2">¿Cómo y por qué calculo el porcentaje?</h3>
+        <p class="pharagAboutMe">
+          Medir habilidades en números o porcentajes no siempre es preciso, ya que el conocimiento y la experiencia evolucionan constantemente.
+          Sin embargo, para organizar y mostrar mi nivel en distintas áreas, he optado por agrupar mis habilidades en categorías específicas.
+          Cada categoría refleja un conjunto de herramientas, conocimientos y tecnologías que manejo, y el porcentaje asociado no representa una
+          medición exacta, sino una referencia basada en la cantidad de proyectos en los que he aplicado dichas habilidades. Es mi forma de visualizar
+          mi crecimiento tanto como desarrollador como creador digital.
+        </p>
+        <p class="pharagAboutMe">
+          Además, incluyo un cálculo promedio de mis habilidades, lo que me permite entender mi evolución global como profesional y en qué aspectos puedo seguir mejorando.
+        </p>
+        <p class="pharagAboutMe" style="font-style: italic; opacity: 0.6;">
+          → Da clic en cada tab para expandirlo y descubrir una breve descripción y detalles de cada categoría.
+        </p>
+        <div class="completePercent">
+          <div class="showcontainerrrr">
+            <div class="topTabContainer">
+              <div class="headerTopTab">
+                <span class="tabMessage">Nivel Global de Habilidades</span>
+                <span class="tabMessage"><span>82.5%</span></span>
+              </div>
+              <div class="loadingBarTab">
+                <div class="barRedTab" style="width: 82.5%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="leftContent">
+        <div *ngFor="let tab of tabsInfo" class="tabContainer" (click)="toggleTab(tab.id_tab)">
+          <div class="topTabContainer">
+            <div class="headerTopTab">
+              <span class="tabMessage">{{ tab.title_tab }}</span>
+              <span class="tabMessage">
+                <span>{{ tab.percent_tab }}%</span>
+                <i class="bi bi-chevron-right rotateI" [ngClass]="{'open': openTab === tab.id_tab}"></i>
+              </span>
+            </div>
+            <div class="loadingBarTab">
+              <div class="barRedTab" [style.width.%]="tab.percent_tab"></div>
+            </div>
+          </div>
+          <div class="tabContent" [ngClass]="{'show': openTab === tab.id_tab}">
+            <p class="tabParagraph">{{ tab.desc_tab }}</p>
+            <div class="rrTabContent">
+              <span *ngFor="let tag of tab.tags_projects" class="tagTabShow">{{ tag }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+
+  
 
     <section class="projects" id="projects">
       <h2>Projects</h2>

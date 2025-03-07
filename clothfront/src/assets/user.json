@@ -28,10 +28,10 @@
         "gpa": 4.5
       },
       {
-      "degree": "Teconologo en Analisis y Desarrollo de Sistemas de Información (ADSI)",
-      "university": "SENA",
-      "yearRange": "2021 - 2023",
-      "gpa": 4.5
+        "degree": "Teconologo en Analisis y Desarrollo de Sistemas de Información (ADSI)",
+        "university": "SENA",
+        "yearRange": "2021 - 2023",
+        "gpa": 4.5
       },
       {
         "degree": "Estudiante Ing Sistemas",
@@ -42,11 +42,11 @@
     ],
 
     "experience": {
-        "company": "Pago Simple SA",
-        "yearRange": "03/04/23 a 11/07/2024",
-        "position": "Desarrollador Full Stack",
-        "description": "Desarrollé APIs y sistemas de gestión enfocados en el manejo de información para la liquidación y pago de aportes a la seguridad social, parafiscales, cesantías y pensiones voluntarias. Implementé soluciones escalables y eficientes para mejorar el procesamiento de datos y optimizar los procesos de pago."
-      },
+      "company": "Pago Simple SA",
+      "yearRange": "03/04/23 a 11/07/2024",
+      "position": "Desarrollador Full Stack",
+      "description": "Desarrollé APIs y sistemas de gestión enfocados en el manejo de información para la liquidación y pago de aportes a la seguridad social, parafiscales, cesantías y pensiones voluntarias. Implementé soluciones escalables y eficientes para mejorar el procesamiento de datos y optimizar los procesos de pago."
+    },
 
     "projects": [
       {
@@ -71,5 +71,101 @@
   "technologies": [
     "Angular", "Spring Boot", "Java", "C#", "TypeScript", 
     "JavaScript", "PostgreSQL", "AWS", "Azure"
+  ],
+
+  "tabsInfo": [
+    {
+      "id_tab": 1,
+      "title_tab": "Diseño",
+      "percent_tab": "90",
+      "desc_tab": "Experiencia en diseño UI/UX enfocado en la creación de interfaces intuitivas y atractivas para el usuario final. Amplia capacidad de análisis en usabilidad y experiencia de usuario.",
+      "tags_project": [
+        "Creación de Wireframes",
+        "Diseño de Interfaces",
+        "Figma",
+        "Adobe XD",
+        "Photoshop",
+        "Illustrator"
+      ]
+    },
+    {
+      "id_tab": 2,
+      "title_tab": "Desarrollo - FrontEnd",
+      "percent_tab": "85",
+      "desc_tab": "Desarrollo de aplicaciones web responsivas y optimizadas utilizando tecnologías modernas como React y Next.js. Fuerte enfoque en la accesibilidad y el rendimiento.",
+      "tags_project": [
+        "HTML5",
+        "CSS3 / SASS",
+        "JavaScript",
+        "React.js",
+        "Next.js",
+        "TailwindCSS"
+      ]
+    },
+    {
+      "id_tab": 3,
+      "title_tab": "Desarrollo - BackEnd",
+      "percent_tab": "75",
+      "desc_tab": "Implementación de API REST y GraphQL con arquitecturas escalables, utilizando Node.js y bases de datos SQL/NoSQL. Enfoque en seguridad y buenas prácticas.",
+      "tags_project": [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "JWT / OAuth"
+      ]
+    },
+    {
+      "id_tab": 4,
+      "title_tab": "Social Media",
+      "percent_tab": "80",
+      "desc_tab": "Creación de contenido atractivo y estrategias de marketing digital para aumentar el engagement en plataformas como Instagram, Facebook y LinkedIn.",
+      "tags_project": [
+        "Marketing Digital",
+        "Gestión de Redes",
+        "Estrategias de Engagement",
+        "Creación de Contenido",
+        "SEO / SEM"
+      ]
+    }
+  ],
+
+  "myStackInfo": [
+    {
+      "id_StackInfo": 1,
+      "title_StackInfo": "ReactJS",
+      "version_StackInfo": "18.2"
+    },
+    {
+      "id_StackInfo": 2,
+      "title_StackInfo": "NodeJS",
+      "version_StackInfo": "20.0.0"
+    },
+    {
+      "id_StackInfo": 3,
+      "title_StackInfo": "JavaScript",
+      "version_StackInfo": "ES13"
+    },
+    {
+      "id_StackInfo": 4,
+      "title_StackInfo": "Express",
+      "version_StackInfo": "4.20.0"
+    },
+    {
+      "id_StackInfo": 5,
+      "title_StackInfo": "MySQL",
+      "version_StackInfo": "8.0"
+    },
+    {
+      "id_StackInfo": 6,
+      "title_StackInfo": "Git",
+      "version_StackInfo": "2.48.1"
+    },
+    {
+      "id_StackInfo": 7,
+      "title_StackInfo": "GitHub",
+      "version_StackInfo": "2025"
+    }
   ]
 }

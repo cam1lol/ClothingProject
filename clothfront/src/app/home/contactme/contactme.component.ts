@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import emailjs from '@emailjs/browser';
+import { environment } from 'src/enviroments/enviroment';
 
 @Component({
   selector: 'app-contactme',
@@ -8,17 +9,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ContactmeComponent implements OnInit {
 
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
   ngOnInit(): void {
     const form = document.querySelector("#contact-form") as HTMLFormElement;
 
     if (!form) {
-      console.error("No se encontró el formulario en el DOM.");
       return;
     }
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       const fullname = (document.querySelector("#fullname") as HTMLInputElement)?.value.trim();
@@ -27,7 +27,6 @@ export class ContactmeComponent implements OnInit {
       const affair = (document.querySelector("#affair") as HTMLInputElement)?.value.trim();
       const message = (document.querySelector("#message") as HTMLTextAreaElement)?.value.trim();
 
-      // Eliminar mensajes de error previos
       document.querySelectorAll(".error-message").forEach(el => el.remove());
 
       let isValid = true;
@@ -53,41 +52,33 @@ export class ContactmeComponent implements OnInit {
       if (!affair || affair.length < 3) showError("affair", "El asunto debe tener al menos 3 caracteres.");
       if (!message || message.length < 10) showError("message", "El mensaje debe tener al menos 10 caracteres.");
 
-      // Si todo está bien, mostrar mensaje en consola
-      if (isValid) {
-        const formData = {
-          fullname: fullname,
-          email: email,
-          phone: phone,
-          affair: affair,
-          message: message
-        };
+      if (!isValid) return;
 
-        console.log("Enviando los datos del formulario", formData);
+      const formData = {
+        to_name: "Destinatario",
+        user_name: fullname,
+        email: email,
+        phone: phone,
+        affair: affair,
+        message: message,
+        date: new Date().toLocaleString()
+      };
 
-        const googleAppsScriptURL = "https://script.google.com/macros/s/AKfycbyhzkZNmo3i-LcCduaXVvJdGN2H4jJ8ImIi4H4HZhAIh15Mki0E8vuJAwubSlWvSsa-ow/exec";
-
-        const headers = new HttpHeaders({
-          'Content-Type': 'application/json'
-        });
-
-        this.http.post(googleAppsScriptURL, formData, { headers }).subscribe(
-          (response: any) => {
-            if (response.status === "success") {
-              console.log("✅ Formulario enviado con éxito");
-              alert("Mensaje enviado correctamente");
-              form.reset();
-            } else {
-              console.error("❌ Error al enviar el formulario: ", response.error);
-              alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
-            }
-          },
-
-          (error) => {
-            console.error("❌ Error en la solicitud HTTP: ", error);
-            alert("No se pudo enviar el mensaje, verifica tu conexión a internet e inténtalo nuevamente.");
-          }
+      try {
+        const response = await emailjs.send(
+          environment.emailjsServiceID,
+          environment.emailjsTemplateID,
+          formData,
+          environment.emailjsPublicKey
         );
+
+        console.log("Correo enviado con éxito:", response);
+        alert("¡Mensaje enviado con éxito! 🎉");
+        form.reset();
+
+      } catch (error) {
+        console.error("Error al enviar el correo:", error);
+        alert("Hubo un error al enviar el mensaje. Inténtalo de nuevo.");
       }
     });
   }
