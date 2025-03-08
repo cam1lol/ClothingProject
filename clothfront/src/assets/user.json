@@ -53,19 +53,19 @@
         "name": "API chat bot",
         "description": "Una API que interactúa con los usuarios utilizando procesamiento de lenguaje natural (NLP) y aprendizaje automático.",
         "imageUrl": "assets/bot.jpg",
-        "url": "https://github.com/cam1lol/chatBot"
+        "url": "https://github.com/cam1lol/chatBot.git"
       },
       {
         "name": "Panel de Control de Analytics",
         "description": "Una aplicación de panel de control que muestra gráficos interactivos con datos de analítica.",
         "imageUrl": "assets/panel.jpg",
-        "url": "https://github.com/cam1lol/controlPanel"
+        "url": "https://github.com/cam1lol/controlPanel.git"
       },
       {
         "name": "Calculadora de Finanzas Personales",
         "description": "Una calculadora para gestionar las finanzas personales de los usuarios.",
         "imageUrl": "assets/calculadora.jpg",
-        "url": "https://github.com/cam1lol/calculator"
+        "url": "https://github.com/cam1lol/calculator.git"
       }
     ]
   },
