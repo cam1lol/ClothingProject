@@ -52,17 +52,20 @@
       {
         "name": "API chat bot",
         "description": "Una API que interactúa con los usuarios utilizando procesamiento de lenguaje natural (NLP) y aprendizaje automático.",
-        "imageUrl": ""
+        "imageUrl": "assets/bot.jpg",
+        "url": "https://github.com/cam1lol/chatBot"
       },
       {
         "name": "Panel de Control de Analytics",
         "description": "Una aplicación de panel de control que muestra gráficos interactivos con datos de analítica.",
-        "imageUrl": ""
+        "imageUrl": "assets/panel.jpg",
+        "url": "https://github.com/cam1lol/controlPanel"
       },
       {
         "name": "Calculadora de Finanzas Personales",
         "description": "Una calculadora para gestionar las finanzas personales de los usuarios.",
-        "imageUrl": ""
+        "imageUrl": "assets/calculadora.jpg",
+        "url": "https://github.com/cam1lol/calculator"
       }
     ]
   },
@@ -83,7 +86,7 @@
         "Creación de Wireframes",
         "Diseño de Interfaces",
         "Figma",
-        "Adobe XD",
+        "Casos de Uso",
         "Photoshop",
         "Illustrator"
       ]
@@ -91,42 +94,43 @@
     {
       "id_tab": 2,
       "title_tab": "Desarrollo - FrontEnd",
-      "percent_tab": "85",
-      "desc_tab": "Desarrollo de aplicaciones web responsivas y optimizadas utilizando tecnologías modernas como React y Next.js. Fuerte enfoque en la accesibilidad y el rendimiento.",
+      "percent_tab": "75",
+      "desc_tab": "Desarrollo de aplicaciones web responsivas y optimizadas utilizando tecnologías modernas como Angular y UI Grid. Fuerte enfoque en la accesibilidad y el rendimiento.",
       "tags_project": [
         "HTML5",
-        "CSS3 / SASS",
+        "AJAX",
         "JavaScript",
-        "React.js",
-        "Next.js",
-        "TailwindCSS"
+        "Angular",
+        "Typescript",
+        "Bootstrap"
       ]
     },
     {
       "id_tab": 3,
       "title_tab": "Desarrollo - BackEnd",
-      "percent_tab": "75",
+      "percent_tab": "80",
       "desc_tab": "Implementación de API REST y GraphQL con arquitecturas escalables, utilizando Node.js y bases de datos SQL/NoSQL. Enfoque en seguridad y buenas prácticas.",
       "tags_project": [
-        "Node.js",
-        "Express.js",
+        "Java",
+        "Spring Boot",
         "MongoDB",
         "MySQL",
         "PostgreSQL",
-        "JWT / OAuth"
+        "MVC / Microservicios"
       ]
     },
     {
       "id_tab": 4,
-      "title_tab": "Social Media",
+      "title_tab": "DevOps & Cloud",
       "percent_tab": "80",
-      "desc_tab": "Creación de contenido atractivo y estrategias de marketing digital para aumentar el engagement en plataformas como Instagram, Facebook y LinkedIn.",
+      "desc_tab": "Implementación de despliegues en la nube con Azure y AWS, gestión de CI/CD y automatización de procesos para mejorar la eficiencia y escalabilidad de los sistemas.",
       "tags_project": [
-        "Marketing Digital",
-        "Gestión de Redes",
-        "Estrategias de Engagement",
-        "Creación de Contenido",
-        "SEO / SEM"
+        "CI/CD",
+        "Azure DevOps",
+        "AWS RDS",
+        "Docker",
+        "Automatización",
+        "Infraestructura como Código"
       ]
     }
   ],
@@ -134,7 +138,7 @@
   "myStackInfo": [
     {
       "id_StackInfo": 1,
-      "title_StackInfo": "ReactJS",
+      "title_StackInfo": "Angular",
       "version_StackInfo": "18.2"
     },
     {

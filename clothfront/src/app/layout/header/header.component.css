@@ -4,48 +4,57 @@
     justify-content: space-between;
     width: 100%;
     min-height: 60px;
-    max-width: nome;
     margin: 0 auto;
     background-color: #fff;
     border-bottom: 2px solid #efebdd;
     padding: 0 50px;
 }
 
-a{
-    text-decoration: none;
-}
-
-li {
-    text-decoration: none;
-}
-
-.listitemsmenu {
+/* Estilo del logo */
+.logocontainer_nav {
     display: flex;
-    height: 100%;
-    width: 100%;
     align-items: center;
+}
+
+.logonav {
+    width: 40px;
+    height: 40px;
+    opacity: 60%;
+}
+
+/* Menú de navegación */
+.listitemsmenu {
+    flex: 1;
+    display: flex;
     justify-content: center;
-    margin: 0;
+    align-items: center;
 }
 
 .itemsdata {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     gap: 20px;
     margin: 0;
-    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+}
+
+.itemsdata a {
+    text-decoration: none;
+    color: #9e9b9b;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.itemsdata a:hover {
+    color: #efebdd;
 }
 
 .item_nav {
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
     color: rgb(106, 106, 106);
     cursor: pointer;
-    transition: all .3s ease;
+    transition: color 0.3s ease;
     text-transform: capitalize;
 }
 
@@ -53,27 +62,22 @@ li {
     color: #efebdd;
 }
 
-.logonav {
-    display: flex;
-    width: 90px;
-    height: 50px;
-}
-
+/* Botón de contacto */
 .contactmebtn {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     text-transform: capitalize;
-    width: 170px;
+    width: 130px;
     color: #9e9b9b;
     background-color: #efebdd;
     border-radius: 15px;
     padding: 8px 15px;
     font-size: 12pt;
-    transition: all .4s ease;
+    transition: background-color 0.4s ease;
     gap: 4px;
     cursor: pointer;
+    border: none;
 }
 
 .contactmebtn i {
@@ -88,19 +92,54 @@ li {
     background-color: #efebdd;
 }
 
-/* Responsividad */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
     .mainnav {
-        padding: 0 20px; /* Reduce el padding en móviles */
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .listitemsmenu {
+        display: none; /* Ocultar menú en móvil */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 2px solid #efebdd;
+        z-index: 10;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .listitemsmenu.active {
+        display: flex; /* Mostrar menú cuando esté activo */
     }
 
     .itemsdata {
-        gap: 10px; /* Reduce el espacio entre elementos en móviles */
+        flex-direction: column;
+        gap: 15px;
     }
 
     .contactmebtn {
         width: auto;
         padding: 6px 12px;
         font-size: 10pt;
+    }
+
+    /* Botón hamburguesa */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(106, 106, 106);
+        transition: all 0.3s ease;
     }
 }

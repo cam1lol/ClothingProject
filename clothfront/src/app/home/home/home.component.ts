@@ -15,6 +15,7 @@ interface Tab {
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  
   title: string = '';
   user: any = {};
   description: string = '';
@@ -22,8 +23,8 @@ export class HomeComponent implements OnInit {
   technologies: any[] = [];
   experience: any = {};
   projects: any[] = [];
-  tabsInfo: Tab[] = [];
-  tags_project: any = [];
+  tabsInfo: any[] = [];
+  tags_project: any[] = [];
 
   isModalOpen: boolean = false;
   openTab: number | null = null;
@@ -40,8 +41,10 @@ export class HomeComponent implements OnInit {
         this.technologies = data.user.technologies;
         this.experience = data.user.experience;
         this.projects = data.user.projects;
-        this.tabsInfo = data.tabsInfo || []; // Evita errores si no existe en el JSON
-        this.tags_project = data.tags_project;
+        this.tabsInfo = data.tabsInfo;
+        this.tags_project = data.tabsInfo.tags_project;
+
+        console.log("Datos de tags", this.tags_project);
 
         console.log("DATOS DE user.education", this.education);
         console.log("DATOS DE PROJECTS", this.projects);
@@ -51,6 +54,7 @@ export class HomeComponent implements OnInit {
       }
     );
   }
+
 
   openModal(): void {
     this.isModalOpen = true;
@@ -75,7 +79,9 @@ export class HomeComponent implements OnInit {
   }
 
   viewProject(project: any) {
-    console.log("Viewing project: ", project);
+    if (project.url) {
+      window.open(project.url, '_blank');
+    }
   }
 
   toggleTab(id: number): void {

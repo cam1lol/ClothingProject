@@ -31,10 +31,10 @@ p {
     font-family: 'ubuntu';
 }
 
-h, h1,h2, h3, h4 {
+h1, h2, h3, h4 {
     font-family: 'ubuntu';
 }
-/* 2. Hero Section */
+/* 2. Hero Section (Imagen Inicio) */
 .hero {
     display: flex;
     align-items: center;
@@ -44,7 +44,7 @@ h, h1,h2, h3, h4 {
 
 .hero-image {
     flex: 1;
-    background-color: #e5d7c9;
+    /* background-color: #e5d7c9; */
     padding: 40px;
     border-radius: 8px;
 }
@@ -57,11 +57,14 @@ h, h1,h2, h3, h4 {
 .hero-content {
     flex: 1;
     padding-left: 40px;
+    margin-top: 8vh;
 }
 
 h1 {
-    font-size: 48px;
+    font-size: 35px;
     margin-bottom: 20px;
+    color: #5d5d5dce;
+    font-family: 'Ubuntu';
 }
 
 .search-bar {
@@ -307,7 +310,7 @@ h1 {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    background-color: #E6E8E5;
+    background-color: #f1f1f1;
     border: 1px solid #ffe7e7;
     padding: 20px 24px;
     border-radius: 20px;
@@ -323,7 +326,7 @@ h1 {
 .barRedTab {
     display: flex;
     height: 100%;
-    background-color: #D3E2EA;
+    background-color: #dfd8c3;
     border-radius: 30px;
 }
 
@@ -345,7 +348,7 @@ h1 {
 }
 
 .tabContent.show {
-    max-height: 200px;
+    max-height: 220px;
     opacity: 1;
 }
 
@@ -385,7 +388,7 @@ h1 {
     display: flex;
     width: 100%;
     height: 10px;
-    background-color: #B7CFDA;
+    background-color: #cccccc72;
     margin-top: 10px;
     position: relative;
     border-radius: 30px;
@@ -429,7 +432,7 @@ h1 {
     height: 10vh;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #ebebebdc;
     border-radius: 20px;
     margin-top: 10px;
     color: #ffffff;
@@ -565,29 +568,10 @@ h1 {
 }
 
 /* 6. Social Media Links */
-.social-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
 
-button {
-    background-color: #efebdd;
-    /* color: #fff; */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover {
-    background-color: #f8f1f1;
-    transform: translateY(-3px);
-}
 
 /* 7. Media Queries for Mobile */
+
 @media (max-width: 768px) {
     /* Ajustes para la hero section en móviles */
     .hero {
@@ -615,3 +599,75 @@ button:hover {
         grid-template-columns: 1fr;
     }
 }
+
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        padding-left: 0;
+        margin-top: 0%;
+    }
+    .timeline {
+        border-left: none;
+    }
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    .search-bar {
+        flex-direction: column;
+    }
+    .search-bar input {
+        margin-bottom: 10px;
+    }
+    .tech-list {
+        justify-content: center;
+    }
+    .project-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    .modal {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    .text-data {
+        font-size: 15px;
+    }
+    .timeline-content {
+        margin-left: 0;
+    }
+
+    .contentSect3 {
+        flex-direction: column;
+    }
+
+    .tabContent.show {
+        max-height: fit-content;
+    }
+
+    .rrTabContent {
+        max-height: fit-content;
+        flex-direction: column;
+    }
+
+    .project-image {
+       margin-top: 0%;
+    }
+}
+

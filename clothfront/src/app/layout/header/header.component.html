@@ -1,20 +1,34 @@
 <nav class="mainnav">
+    <!-- Logo -->
     <div class="logocontainer_nav">
-        <img src="assets/C.png" alt="User Image" class="logonav"/>
+        <img src="assets/miniDragon.png" alt="User Image" class="logonav"/>
     </div>
-    <div class="listitemsmenu">
+
+    <!-- Botón hamburguesa -->
+    <div class="menu-toggle" (click)="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Menú de navegación -->
+    <div class="listitemsmenu" [ngClass]="{ 'active': menuActive }">
         <ul class="itemsdata">
-            <a [routerLink]="['/home']" routerLinkActive="router-link-active"><li class="item_nav">about me</li></a>
-
-            <a [routerLink]="['/projects']" routerLinkActive="router-link-active"><li class="item_nav">my projects</li></a>
-           
-            <!-- <a href="#projects"><li class="item_nav">my projects</li></a> -->
-            <!-- <li class="item_nav">my repository</li> -->
-
-            <a [routerLink]="['/contact']" routerLinkActive="router-link-active" ><li class="item_nav">contact me</li></a>
+            <li class="item_nav">
+                <a [routerLink]="['/home']" routerLinkActive="router-link-active">about me</a>
+            </li>
+            <li class="item_nav">
+                <a [routerLink]="['/projects']" routerLinkActive="router-link-active">my projects</a>
+            </li>
+            <li class="item_nav">
+                <a [routerLink]="['/contact']" routerLinkActive="router-link-active">contact me</a>
+            </li>
         </ul>
     </div>
-    <button class="contactmebtn">go to repo 
+
+    <!-- Botón de ir al repositorio -->
+    <button class="contactmebtn">
+        My repo 
         <i class="bi bi-arrow-up-right"></i>
     </button>
 </nav>
