@@ -13,4 +13,9 @@ export class HeaderComponent {
     this.menuActive = !this.menuActive;
   }
 
+  goToRepo() {
+    window.open("https://github.com/cam1lol", "_blank");
+  }
+  
+
 }
