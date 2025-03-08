@@ -43,11 +43,6 @@ export class HomeComponent implements OnInit {
         this.projects = data.user.projects;
         this.tabsInfo = data.tabsInfo;
         this.tags_project = data.tabsInfo.tags_project;
-
-        console.log("Datos de tags", this.tags_project);
-
-        console.log("DATOS DE user.education", this.education);
-        console.log("DATOS DE PROJECTS", this.projects);
       },
       (error) => {
         console.error("Error al cargar el JSON:", error);
@@ -79,8 +74,10 @@ export class HomeComponent implements OnInit {
   }
 
   viewProject(project: any) {
-    if (project.url) {
+    if (project.url && project.url) {
       window.open(project.url, '_blank');
+    }else{
+      console.warn('El proyecto no tiene una url definida.');
     }
   }
 
